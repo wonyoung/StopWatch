@@ -17,4 +17,6 @@ public interface StopWatchModel {
 	void stop();
 
 	void reset();
+
+	String getTime();
 }

@@ -104,4 +104,15 @@ public class StopWatchPresenterTest {
 		verify(view).enableStopButton(true);
 		verify(view).enableRecordButton(true);
 	}
+
+	
+	@Test
+	public void showsRecordTimeWhenRecord() throws Exception {
+		when(model.getTime()).thenReturn("01:02:03");
+		
+		presenter.record();
+
+		verify(model).getTime();
+		verify(view).setRecord("01:02:03");
+	}	
 }
