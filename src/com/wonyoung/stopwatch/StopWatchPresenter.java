@@ -59,8 +59,7 @@ public class StopWatchPresenter implements CallBack {
 	}
 
 	public void record() {
-		// TODO Auto-generated method stub
-		
+		view.setRecord(model.getTime());
 	}
 
 }
