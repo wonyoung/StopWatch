@@ -15,6 +15,12 @@ public class StopWatchPresenter implements CallBack {
 	public void initialize() {
 		view.setTime(model.getLastTime());
 		view.setRecord(model.getLastRecord());
+		
+		view.enableStartButton(true);
+		view.enableStopButton(false);
+		view.enableRecordButton(false);
+		view.enableContinueButton(false);
+		view.enableResetButton(false);
 	}
 
 	public void start() {
