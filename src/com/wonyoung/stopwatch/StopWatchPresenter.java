@@ -16,8 +16,10 @@ public class StopWatchPresenter {
 	}
 
 	public void start() {
-		// TODO Auto-generated method stub
-		
+		model.start();
+		view.enableStartButton(false);
+		view.enableStopButton(true);
+		view.enableRecordBUtton(true);
 	}
 
 }
