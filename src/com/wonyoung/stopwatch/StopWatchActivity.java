@@ -37,7 +37,7 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 		});
 		StopWatchModel model = new StopWatchModel() {
 			@Override
-			public void start() {
+			public void start(CallBack listener) {
 				// TODO Auto-generated method stub
 			}
 			@Override

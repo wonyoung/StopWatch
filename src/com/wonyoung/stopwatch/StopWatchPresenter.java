@@ -1,6 +1,8 @@
 package com.wonyoung.stopwatch;
 
-public class StopWatchPresenter {
+import com.wonyoung.stopwatch.StopWatchModel.CallBack;
+
+public class StopWatchPresenter implements CallBack {
 
 	private final StopWatchModel model;
 	private final StopWatchView view;
@@ -16,15 +18,15 @@ public class StopWatchPresenter {
 	}
 
 	public void start() {
-		model.start();
+		model.start(this);
 		view.enableStartButton(false);
 		view.enableStopButton(true);
 		view.enableRecordButton(true);
 	}
 
+	@Override
 	public void update(String time) {
-		// TODO Auto-generated method stub
-		
+		view.setTime(time);
 	}
 
 }

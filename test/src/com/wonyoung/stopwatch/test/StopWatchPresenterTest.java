@@ -5,8 +5,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.invocation.InvocationOnMock;
+import org.mockito.stubbing.Answer;
 
 import com.wonyoung.stopwatch.StopWatchModel;
+import com.wonyoung.stopwatch.StopWatchModel.CallBack;
 import com.wonyoung.stopwatch.StopWatchPresenter;
 import com.wonyoung.stopwatch.StopWatchView;
 import static org.mockito.Mockito.*;
@@ -39,12 +42,22 @@ public class StopWatchPresenterTest {
 
 	@Test
 	public void showsStopAndRecordWhenStart() throws Exception {
+		doAnswer(new Answer<Void>() {
+			@Override
+			public Void answer(InvocationOnMock invocation) throws Throwable {
+				CallBack listener = (StopWatchModel.CallBack) invocation.getArguments()[0]; 
+				listener.update("00:02:03");
+				return null;
+			}
+		}).when(model).start(any(StopWatchModel.CallBack.class));
+		
 		presenter.start();
 		
-		verify(model).start();
+		verify(model).start(any(StopWatchModel.CallBack.class));
 		verify(view).enableStartButton(false);
 		verify(view).enableStopButton(true);
 		verify(view).enableRecordButton(true);
+		verify(view).setTime("00:02:03");
 	}
 	
 	@Test
