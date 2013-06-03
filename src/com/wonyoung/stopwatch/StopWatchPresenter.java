@@ -7,13 +7,12 @@ public class StopWatchPresenter {
 
 	public StopWatchPresenter(StopWatchModel model, StopWatchView view) {
 		this.model = model;
-		// TODO Auto-generated constructor stub
 		this.view = view;
 	}
 
 	public void initialize() {
-		// TODO Auto-generated method stub
-		
+		view.setTime(model.getLastTime());
+		view.setRecord(model.getLastRecord());
 	}
 
 }
