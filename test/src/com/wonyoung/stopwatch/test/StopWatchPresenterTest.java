@@ -18,6 +18,9 @@ public class StopWatchPresenterTest {
 		StopWatchView view = mock(StopWatchView.class);
 		StopWatchPresenter presenter = new StopWatchPresenter(model, view);
 
+		when(model.getLastTime()).thenReturn("00:01:02");
+		when(model.getLastRecord()).thenReturn("00:00:34");
+		
 		presenter.initialize();
 		
 		verify(model).getLastTime();
