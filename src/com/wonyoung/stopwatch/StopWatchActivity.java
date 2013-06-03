@@ -17,6 +17,8 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 	private Button startButton;
 	private Button stopButton;
 	private Button recordButton;
+	private Button continueButton;
+	private Button initializeButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +30,19 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 		startButton = (Button) findViewById(R.id.start_button);
 		stopButton = (Button) findViewById(R.id.stop_button);
 		recordButton = (Button) findViewById(R.id.record_button);
+		continueButton = (Button) findViewById(R.id.continue_button);
+		initializeButton = (Button) findViewById(R.id.initialize_button);
 		
 		startButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				presenter.start();
+			}
+		});
+		stopButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				presenter.stop();
 			}
 		});
 		StopWatchModel model = new StopWatchModel() {
@@ -47,6 +57,10 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 			@Override
 			public String getLastRecord() {
 				return "lastRecord";
+			}
+			@Override
+			public void stop() {
+				// TODO Auto-generated method stub
 			}
 		};
 		presenter = new StopWatchPresenter(model , this);
@@ -83,6 +97,18 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 	@Override
 	public void enableRecordButton(boolean enabled) {
 		recordButton.setEnabled(enabled);
+	}
+
+	@Override
+	public void enableContinueButton(boolean enabled) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void enableInitializeButton(boolean enabled) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
