@@ -45,6 +45,13 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 				presenter.stop();
 			}
 		});
+		resetButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				presenter.reset();
+			}
+		});
+		
 		StopWatchModel model = new StopWatchModel() {
 			@Override
 			public void start(CallBack listener) {
@@ -60,6 +67,10 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 			}
 			@Override
 			public void stop() {
+				// TODO Auto-generated method stub
+			}
+			@Override
+			public void reset() {
 				// TODO Auto-generated method stub
 			}
 		};
@@ -101,14 +112,12 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 
 	@Override
 	public void enableContinueButton(boolean enabled) {
-		// TODO Auto-generated method stub
-		
+		continueButton.setEnabled(enabled);
 	}
 
 	@Override
 	public void enableResetButton(boolean enabled) {
-		// TODO Auto-generated method stub
-		
+		resetButton.setEnabled(enabled);
 	}
 
 }
