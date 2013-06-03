@@ -77,4 +77,14 @@ public class StopWatchPresenterTest {
 		verify(view).enableContinueButton(true);
 		verify(view).enableResetButton(true);
 	}
+	
+	@Test
+	public void showsStartWhenReset() throws Exception {
+		presenter.reset();
+		
+		verify(model).reset();
+		verify(view).enableContinueButton(false);
+		verify(view).enableResetButton(false);
+		verify(view).enableStartButton(true);
+	}
 }
