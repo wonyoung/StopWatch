@@ -14,4 +14,5 @@ public interface StopWatchModel {
 
 	void start(CallBack listener);
 
+	void stop();
 }

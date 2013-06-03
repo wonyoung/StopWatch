@@ -29,4 +29,9 @@ public class StopWatchPresenter implements CallBack {
 		view.setTime(time);
 	}
 
+	public void stop() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

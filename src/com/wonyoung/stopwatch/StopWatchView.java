@@ -12,4 +12,8 @@ public interface StopWatchView {
 
 	void enableRecordButton(boolean enabled);
 
+	void enableContinueButton(boolean enabled);
+
+	void enableInitializeButton(boolean enabled);
+
 }

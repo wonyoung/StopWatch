@@ -66,4 +66,15 @@ public class StopWatchPresenterTest {
 		
 		verify(view).setTime("00:02:03");
 	}
+	
+	@Test
+	public void showsConituneAndInitWhenStop() throws Exception {
+		presenter.stop();
+		
+		verify(model).stop();
+		verify(view).enableStopButton(false);
+		verify(view).enableRecordButton(false);
+		verify(view).enableContinueButton(true);
+		verify(view).enableInitializeButton(true);
+	}
 }
