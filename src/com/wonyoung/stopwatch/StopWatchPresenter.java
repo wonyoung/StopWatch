@@ -30,8 +30,11 @@ public class StopWatchPresenter implements CallBack {
 	}
 
 	public void stop() {
-		// TODO Auto-generated method stub
-		
+		model.stop();
+		view.enableStopButton(false);
+		view.enableRecordButton(false);
+		view.enableContinueButton(true);
+		view.enableInitializeButton(true);
 	}
 
 }
