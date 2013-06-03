@@ -46,4 +46,11 @@ public class StopWatchPresenterTest {
 		verify(view).enableStopButton(true);
 		verify(view).enableRecordButton(true);
 	}
+	
+	@Test
+	public void showsUpdatedTimeWhenUpdate() throws Exception {
+		presenter.update("00:02:03");
+		
+		verify(view).setTime("00:02:03");
+	}
 }

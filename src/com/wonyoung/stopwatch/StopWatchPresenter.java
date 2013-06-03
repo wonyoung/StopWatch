@@ -22,4 +22,9 @@ public class StopWatchPresenter {
 		view.enableRecordButton(true);
 	}
 
+	public void update(String time) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

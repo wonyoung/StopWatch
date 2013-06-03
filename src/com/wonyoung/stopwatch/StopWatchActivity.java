@@ -40,15 +40,12 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 			public void start() {
 				// TODO Auto-generated method stub
 			}
-			
 			@Override
 			public String getLastTime() {
 				return "lastTime";
 			}
-			
 			@Override
 			public String getLastRecord() {
-				// TODO Auto-generated method stub
 				return "lastRecord";
 			}
 		};
