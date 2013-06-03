@@ -44,6 +44,6 @@ public class StopWatchPresenterTest {
 		verify(model).start();
 		verify(view).enableStartButton(false);
 		verify(view).enableStopButton(true);
-		verify(view).enableRecordBUtton(true);
+		verify(view).enableRecordButton(true);
 	}
 }

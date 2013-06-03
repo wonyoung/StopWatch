@@ -6,10 +6,10 @@ public interface StopWatchView {
 
 	void setRecord(String record);
 
-	void enableStartButton(boolean enable);
+	void enableStartButton(boolean enabled);
 
-	void enableStopButton(boolean enable);
+	void enableStopButton(boolean enabled);
 
-	void enableRecordBUtton(boolean enable);
+	void enableRecordButton(boolean enabled);
 
 }

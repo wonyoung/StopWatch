@@ -19,7 +19,7 @@ public class StopWatchPresenter {
 		model.start();
 		view.enableStartButton(false);
 		view.enableStopButton(true);
-		view.enableRecordBUtton(true);
+		view.enableRecordButton(true);
 	}
 
 }
