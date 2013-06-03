@@ -6,4 +6,6 @@ public interface StopWatchModel {
 
 	String getLastRecord();
 
+	void start();
+
 }

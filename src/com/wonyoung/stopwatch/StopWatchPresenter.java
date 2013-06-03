@@ -15,4 +15,9 @@ public class StopWatchPresenter {
 		view.setRecord(model.getLastRecord());
 	}
 
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

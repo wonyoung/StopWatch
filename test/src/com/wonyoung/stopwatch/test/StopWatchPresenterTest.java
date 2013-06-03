@@ -3,6 +3,7 @@ package com.wonyoung.stopwatch.test;
 import static org.junit.Assert.*;
 
 
+import org.junit.Before;
 import org.junit.Test;
 
 import com.wonyoung.stopwatch.StopWatchModel;
@@ -12,12 +13,19 @@ import static org.mockito.Mockito.*;
 
 public class StopWatchPresenterTest {
 
-	@Test
-	public void showsLastTimeAndRecordWhenInitialize() {
-		StopWatchModel model = mock(StopWatchModel.class);
-		StopWatchView view = mock(StopWatchView.class);
-		StopWatchPresenter presenter = new StopWatchPresenter(model, view);
+	private StopWatchModel model;
+	private StopWatchView view;
+	private StopWatchPresenter presenter;
 
+	@Before
+	public void setUp() throws Exception {
+		model = mock(StopWatchModel.class);
+		view = mock(StopWatchView.class);
+		presenter = new StopWatchPresenter(model, view);
+	}
+	
+	@Test
+	public void showsLastTimeAndRecordWhenInitialize() throws Exception {
 		when(model.getLastTime()).thenReturn("00:01:02");
 		when(model.getLastRecord()).thenReturn("00:00:34");
 		
@@ -29,4 +37,13 @@ public class StopWatchPresenterTest {
 		verify(view).setRecord("00:00:34");
 	}
 
+	@Test
+	public void showsStopAndRecordWhenStart() throws Exception {
+		presenter.start();
+		
+		verify(model).start();
+		verify(view).enableStartButton(false);
+		verify(view).enableStopButton(true);
+		verify(view).enableRecordBUtton(true);
+	}
 }
