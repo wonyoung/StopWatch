@@ -75,6 +75,6 @@ public class StopWatchPresenterTest {
 		verify(view).enableStopButton(false);
 		verify(view).enableRecordButton(false);
 		verify(view).enableContinueButton(true);
-		verify(view).enableInitializeButton(true);
+		verify(view).enableResetButton(true);
 	}
 }

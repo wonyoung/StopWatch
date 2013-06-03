@@ -34,7 +34,7 @@ public class StopWatchPresenter implements CallBack {
 		view.enableStopButton(false);
 		view.enableRecordButton(false);
 		view.enableContinueButton(true);
-		view.enableInitializeButton(true);
+		view.enableResetButton(true);
 	}
 
 }

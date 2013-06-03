@@ -48,9 +48,9 @@
         android:text="@string/continue1" />
 
     <Button
-        android:id="@+id/initialize_button"
+        android:id="@+id/reset_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/initialize" />
+        android:text="@string/reset" />
 
 </LinearLayout>

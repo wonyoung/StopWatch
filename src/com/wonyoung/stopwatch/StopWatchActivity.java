@@ -18,7 +18,7 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 	private Button stopButton;
 	private Button recordButton;
 	private Button continueButton;
-	private Button initializeButton;
+	private Button resetButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 		stopButton = (Button) findViewById(R.id.stop_button);
 		recordButton = (Button) findViewById(R.id.record_button);
 		continueButton = (Button) findViewById(R.id.continue_button);
-		initializeButton = (Button) findViewById(R.id.initialize_button);
+		resetButton = (Button) findViewById(R.id.reset_button);
 		
 		startButton.setOnClickListener(new OnClickListener() {
 			@Override
@@ -106,7 +106,7 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 	}
 
 	@Override
-	public void enableInitializeButton(boolean enabled) {
+	public void enableResetButton(boolean enabled) {
 		// TODO Auto-generated method stub
 		
 	}
