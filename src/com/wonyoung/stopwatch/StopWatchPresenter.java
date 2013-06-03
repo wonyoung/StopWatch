@@ -19,7 +19,7 @@ public class StopWatchPresenter implements CallBack {
 		view.enableStartButton(true);
 		view.enableStopButton(false);
 		view.enableRecordButton(false);
-		view.enableContinueButton(false);
+		view.enableResumeButton(false);
 		view.enableResetButton(false);
 	}
 
@@ -39,13 +39,13 @@ public class StopWatchPresenter implements CallBack {
 		model.stop();
 		view.enableStopButton(false);
 		view.enableRecordButton(false);
-		view.enableContinueButton(true);
+		view.enableResumeButton(true);
 		view.enableResetButton(true);
 	}
 
 	public void reset() {
 		model.reset();
-		view.enableContinueButton(false);
+		view.enableResumeButton(false);
 		view.enableResetButton(false);
 		view.enableStartButton(true);
 	}

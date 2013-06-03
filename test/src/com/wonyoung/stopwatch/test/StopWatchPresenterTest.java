@@ -42,7 +42,7 @@ public class StopWatchPresenterTest {
 		verify(view).enableStartButton(true);
 		verify(view).enableStopButton(false);
 		verify(view).enableRecordButton(false);
-		verify(view).enableContinueButton(false);
+		verify(view).enableResumeButton(false);
 		verify(view).enableResetButton(false);
 	}
 
@@ -80,7 +80,7 @@ public class StopWatchPresenterTest {
 		verify(model).stop();
 		verify(view).enableStopButton(false);
 		verify(view).enableRecordButton(false);
-		verify(view).enableContinueButton(true);
+		verify(view).enableResumeButton(true);
 		verify(view).enableResetButton(true);
 	}
 	
@@ -89,7 +89,7 @@ public class StopWatchPresenterTest {
 		presenter.reset();
 		
 		verify(model).reset();
-		verify(view).enableContinueButton(false);
+		verify(view).enableResumeButton(false);
 		verify(view).enableResetButton(false);
 		verify(view).enableStartButton(true);
 	}
@@ -99,7 +99,7 @@ public class StopWatchPresenterTest {
 		presenter.resume();
 		
 		verify(model).start(any(CallBack.class));
-		verify(view).enableContinueButton(false);
+		verify(view).enableResumeButton(false);
 		verify(view).enableResetButton(false);
 		verify(view).enableStopButton(true);
 		verify(view).enableRecordButton(true);

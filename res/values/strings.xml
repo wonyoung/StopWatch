@@ -7,7 +7,7 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="record">Record</string>
-    <string name="continue1">Continue</string>
+    <string name="resume">Continue</string>
     <string name="reset">Reset</string>
 
 </resources>

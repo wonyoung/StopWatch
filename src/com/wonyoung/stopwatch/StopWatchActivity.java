@@ -17,7 +17,7 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 	private Button startButton;
 	private Button stopButton;
 	private Button recordButton;
-	private Button continueButton;
+	private Button resumeButton;
 	private Button resetButton;
 
 	@Override
@@ -30,7 +30,7 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 		startButton = (Button) findViewById(R.id.start_button);
 		stopButton = (Button) findViewById(R.id.stop_button);
 		recordButton = (Button) findViewById(R.id.record_button);
-		continueButton = (Button) findViewById(R.id.continue_button);
+		resumeButton = (Button) findViewById(R.id.resume_button);
 		resetButton = (Button) findViewById(R.id.reset_button);
 		
 		startButton.setOnClickListener(new OnClickListener() {
@@ -111,8 +111,8 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 	}
 
 	@Override
-	public void enableContinueButton(boolean enabled) {
-		continueButton.setEnabled(enabled);
+	public void enableResumeButton(boolean enabled) {
+		resumeButton.setEnabled(enabled);
 	}
 
 	@Override
