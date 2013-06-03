@@ -50,4 +50,9 @@ public class StopWatchPresenter implements CallBack {
 		view.enableStartButton(true);
 	}
 
+	public void resume() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

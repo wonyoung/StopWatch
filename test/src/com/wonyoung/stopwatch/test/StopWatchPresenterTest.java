@@ -93,4 +93,15 @@ public class StopWatchPresenterTest {
 		verify(view).enableResetButton(false);
 		verify(view).enableStartButton(true);
 	}
+	
+	@Test
+	public void showsStopAndRecordWhenResume() throws Exception {
+		presenter.resume();
+		
+		verify(model).start(any(CallBack.class));
+		verify(view).enableContinueButton(false);
+		verify(view).enableResetButton(false);
+		verify(view).enableStopButton(true);
+		verify(view).enableRecordButton(true);
+	}
 }
