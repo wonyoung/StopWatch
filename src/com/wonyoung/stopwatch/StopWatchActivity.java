@@ -51,6 +51,12 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 				presenter.reset();
 			}
 		});
+		resumeButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				presenter.resume();
+			}
+		});
 		
 		StopWatchModel model = new StopWatchModel() {
 			@Override
@@ -72,6 +78,11 @@ public class StopWatchActivity extends Activity implements StopWatchView {
 			@Override
 			public void reset() {
 				// TODO Auto-generated method stub
+			}
+			@Override
+			public String getTime() {
+				// TODO Auto-generated method stub
+				return null;
 			}
 		};
 		presenter = new StopWatchPresenter(model , this);
